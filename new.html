@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENELGADA YASSINE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000, #ffffff);
+            color: #A9A9A9;
+            display: flex;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .sidebar {
+            background-color: #1C1C1E;
+            width: 250px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+        }
+
+        .sidebar a {
+            color: #A9A9A9;
+            text-decoration: none;
+            margin: 15px 0;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #b50000;
+        }
+        
+        .friends-table a.red {
+            color: #b50000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Content */
+        .content {
+            margin-left: 270px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: left;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            animation: fadeInUp 1.5s ease;
+        }
+        .hero p {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-top: 10px;
+            animation: fadeInUp 1.8s ease;
+        }
+
+        /* Section Styling */
+        .section {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #000000;
+            border-bottom: 2px solid #000000;
+            display: inline-block;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 20px 0;
+        }
+
+        /* Hobbies & Objectives */
+        .hobbies-objectives {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hobbies-objectives h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            text-align: left;
+            color: #ffffff;
+        }
+
+        .hobbies-objectives ul, .hobbies-objectives ol {
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+            font-size: 1.1em;
+            text-align: left;
+            color: #A9A9A9;
+        }
+
+        .hobbies-objectives li {
+            margin-bottom: 5px;
+        }
+
+        /* Friends Table */
+        .friends-table {
+            width: 100%;
+            color: #D3D3D3;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+        .friends-table th, .friends-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+        .friends-table th {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .friends-table a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #000000;
+            color: #b50000;
+        }
+
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            border-color: #b50000; /* Change border color to red on focus */
+            outline: none; /* Remove default outline */
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #000000;
+            border: none;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 20px;
+        }
+        .contact-form button:hover {
+            background-color: #b50000;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            color: #b50000;
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a href="#hero">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#hobbies-objectives">Hobbies & Objectives</a>
+    <a href="#friends">Friends</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="content">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1>BENELGADA Yassine</h1>
+        <p>Software Engineer</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Me</h2><br>
+        <img src="cat.jpg" alt="Profile Image" class="profile-image">
+        <p>I am a dedicated software engineer with a strong passion for developing ...</p>
+    </section>
+
+    <!-- Hobbies and Objectives Section -->
+    <section class="section hobbies-objectives" id="hobbies-objectives">
+        <h2>Hobbies & Objectives</h2>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="flex: 1; margin-right: 20px; text-align: left;">
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Coding</li>
+                    <li>Playing chess</li>
+                    <li>Listening to music</li>
+                    <li>Gaming</li>
+                </ul>
+            </div>
+            <div style="flex: 1; margin-left: 20px; text-align: left;">
+                <h3>Objectives</h3>
+                <ol>
+                    <li>Develop Soft Skills</li>
+                    <li>Enhance Technical Skills</li>
+                    <li>Continuous Learning</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Friends Section -->
+    <section class="section" id="friends">
+        <h2>Friends</h2>
+        <table class="friends-table">
+            <tr><th>Name</th><th>Age</th><th>City</th><th>Profile</th></tr>
+            <tr><td>Sayli D Ray</td><td>20</td><td>Kyoto</td><td><a class="red" href="https://example.com/johndoe" target="_blank">Profile</a></td></tr>
+            <tr><td>Tahwani Chahwani</td><td>20</td><td>Yotey</td><td><a class="red" href="https://example.com/janesmith" target="_blank">Profile</a></td></tr>
+            <tr><td>Nasser Dasser</td><td>20</td><td>Tokyo</td><td><a class="red" href="https://example.com/emilyjohnson" target="_blank">Profile</a></td></tr>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" onsubmit="showSuccessMessage(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p class="success-message">Message sent correctly.</p>
+        </form>
+    </section>
+</div>
+
+<script>
+    function showSuccessMessage(event) {
+        event.preventDefault();
+        document.querySelector('.success-message').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
